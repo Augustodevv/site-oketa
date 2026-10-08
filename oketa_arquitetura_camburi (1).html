@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oketa Arquitetura - Escritório de arquitetura em Camburi, São Paulo. Projetos de alto padrão no Litoral Norte.">
+    <meta name="keywords" content="arquitetura, camburi, litoral norte, são sebastião, alto padrão, design de interiores, casas de praia">
+    
+    <title>Oketa Arquitetura | Litoral Norte - SP</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================ */
+        /* VARIÁVEIS CSS - OKETA ARQUITETURA */
+        /* Tons minimalistas, modernos e litorâneos */
+        /* ============================================ */
+        :root {
+            /* Cores Principais - Chumbo e Areia */
+            --primary-color: #2D3134;        /* Cinza Chumbo Escuro (Pedra/Concreto) */
+            --primary-dark: #1A1C1E;         /* Quase Preto */
+            --primary-light: #4A5156;        /* Cinza Médio */
+
+            --secondary-color: #C1A68D;      /* Areia / Madeira clara */
+            --secondary-dark: #A68B71;       /* Areia escurecida */
+            --secondary-light: #D9C5B2;      /* Areia clara */
+
+            --accent-color: #8C998F;         /* Verde Sálvia (Mata Atlântica) */
+            --text-dark: #2D3134;            /* Texto escuro */
+            --text-light: #6C757D;           /* Texto claro/cinza */
+            --text-white: #F8F9FA;           /* Texto branco/off-white */
+
+            /* Cores de Fundo */
+            --bg-primary: #FAFAFA;           /* Off-white minimalista */
+            --bg-secondary: #F0EDE8;         /* Tom de linho/areia muito claro */
+            --bg-dark: #2D3134;              
+            --bg-gradient: linear-gradient(135deg, #2D3134 0%, #4A5156 100%);
+
+            /* Cores de Status */
+            --success-color: #8C998F;
+            --warning-color: #C1A68D;
+            --danger-color: #9B5C5C;
+            --info-color: #6C7A89;
+
+            /* Tipografia */
+            --font-primary: 'Poppins', sans-serif;
+            --font-secondary: 'Playfair Display', serif;
+
+            --font-size-xs: 0.75rem;      
+            --font-size-sm: 0.875rem;     
+            --font-size-base: 1rem;       
+            --font-size-lg: 1.125rem;     
+            --font-size-xl: 1.25rem;      
+            --font-size-2xl: 1.5rem;      
+            --font-size-3xl: 1.875rem;    
+            --font-size-4xl: 2.25rem;     
+            --font-size-5xl: 3.5rem;      
+
+            /* Espaçamentos */
+            --spacing-xs: 0.5rem;         
+            --spacing-sm: 1rem;           
+            --spacing-md: 1.5rem;         
+            --spacing-lg: 2rem;           
+            --spacing-xl: 3rem;           
+            --spacing-2xl: 4rem;          
+            --spacing-3xl: 6rem;          
+
+            /* Bordas */
+            --border-radius-sm: 2px;  /* Menos arredondado para um visual mais clean/arquitetônico */
+            --border-radius-md: 4px;   
+            --border-radius-lg: 8px;     
+            --border-radius-xl: 12px;   
+
+            /* Sombras sutis */
+            --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+            /* Transições */
+            --transition-fast: 0.2s ease-in-out;
+            --transition-base: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+
+            /* Layout */
+            --container-max-width: 1200px;
+            --header-height: 80px;
+            --z-fixed: 100;
+            --z-modal: 1000;
+        }
+
+        /* ============================================ */
+        /* RESET E ESTILOS BASE */
+        /* ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--header-height);
+        }
+
+        body {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-base);
+            color: var(--text-dark);
+            background-color: var(--bg-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .section__header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+            position: relative;
+        }
+
+        .section__subtitle {
+            display: inline-block;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section__title {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-4xl);
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section__description {
+            font-size: var(--font-size-base);
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .highlight {
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+
+        /* ============================================ */
+        /* BOTÕES */
+        /* ============================================ */
+        .btn {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-xl);
+            font-family: var(--font-primary);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            border: 1px solid transparent;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-white);
+            border-color: var(--text-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-white);
+            color: var(--primary-color);
+        }
+
+        .btn-small {
+            padding: var(--spacing-xs) var(--spacing-md);
+            font-size: var(--font-size-xs);
+        }
+
+        /* ============================================ */
+        /* HEADER / NAVEGAÇÃO */
+        /* ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+            z-index: var(--z-fixed);
+            transition: all var(--transition-base);
+        }
+
+        .nav {
+            height: var(--header-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav__logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .logo-dot {
+            color: var(--secondary-color);
+        }
+
+        .nav__list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: var(--primary-light);
+            font-weight: 400;
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+
+        .nav__link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--secondary-color);
+            transition: width var(--transition-base);
+        }
+
+        .nav__link:hover,
+        .nav__link.active-link {
+            color: var(--primary-color);
+        }
+
+        .nav__link:hover::after,
+        .nav__link.active-link::after {
+            width: 100%;
+        }
+
+        .nav__toggle,
+        .nav__close {
+            display: none;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* ============================================ */
+        /* HERO SECTION */
+        /* ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            /* Overlay mais sutil, escuro para contraste com texto branco */
+            background-image: linear-gradient(to right, rgba(45, 49, 52, 0.85), rgba(45, 49, 52, 0.4)),
+                              url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: var(--header-height);
+            position: relative;
+        }
+
+        .hero__container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: var(--spacing-2xl);
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero__content {
+            color: var(--text-white);
+        }
+
+        .hero__title {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-5xl);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero__description {
+            font-size: var(--font-size-lg);
+            font-weight: 300;
+            margin-bottom: var(--spacing-xl);
+            opacity: 0.9;
+            max-width: 500px;
+        }
+
+        .hero__buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .hero__stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            max-width: 600px;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-3xl);
+            font-weight: 400;
+            color: var(--secondary-color);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+
+        /* ============================================ */
+        /* SEÇÃO SOBRE */
+        /* ============================================ */
+        .sobre {
+            background-color: var(--bg-primary);
+        }
+
+        .sobre__container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+        }
+
+        .sobre__image {
+            position: relative;
+        }
+        
+        .sobre__image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--secondary-color);
+            z-index: 0;
+        }
+
+        .sobre__image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+            filter: brightness(0.95);
+        }
+
+        .sobre__subtitle {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-3xl);
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.3;
+        }
+
+        .sobre__text {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+            font-weight: 300;
+        }
+
+        .sobre__list {
+            list-style: none;
+            margin: var(--spacing-lg) 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-sm);
+        }
+
+        .sobre__list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            color: var(--primary-light);
+            font-size: var(--font-size-sm);
+        }
+
+        .check-icon {
+            color: var(--secondary-color);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        /* ============================================ */
+        /* GALERIA INSPIRAÇÃO */
+        /* ============================================ */
+        .galeria {
+            background-color: var(--bg-secondary);
+        }
+
+        .galeria__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            gap: var(--spacing-sm);
+        }
+
+        .galeria__item {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .galeria__item--large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .galeria__item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .galeria__item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ============================================ */
+        /* SEÇÃO SERVIÇOS */
+        /* ============================================ */
+        .servicos {
+            background-color: var(--bg-primary);
+        }
+
+        .servicos__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .servico-card {
+            background-color: var(--bg-primary);
+            padding: var(--spacing-xl) var(--spacing-lg);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all var(--transition-base);
+            text-align: left;
+            position: relative;
+        }
+
+        .servico-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width var(--transition-base);
+        }
+
+        .servico-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .servico-card:hover::after {
+            width: 100%;
+        }
+
+        .servico-icon-svg {
+            stroke: var(--secondary-color);
+            width: 48px;
+            height: 48px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .servico-card__title {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-xl);
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .servico-card__description {
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+            font-weight: 300;
+        }
+
+        /* ============================================ */
+        /* SEÇÃO PORTFÓLIO (PROJETOS) */
+        /* ============================================ */
+        .projetos {
+            background-color: var(--bg-secondary);
+        }
+
+        .projetos__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .projeto-card {
+            background-color: var(--bg-primary);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            position: relative;
+        }
+
+        .projeto-card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .projeto-card__image {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .projeto-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .projeto-card:hover .projeto-card__image img {
+            transform: scale(1.05);
+        }
+
+        .projeto-card__badge {
+            position: absolute;
+            top: var(--spacing-sm);
+            right: var(--spacing-sm);
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            padding: 4px 12px;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .projeto-card__content {
+            padding: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .projeto-card__title {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-xl);
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .projeto-card__location {
+            color: var(--secondary-dark);
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .projeto-card__desc {
+            font-size: var(--font-size-sm);
+            color: var(--text-light);
+            font-weight: 300;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .projetos__cta {
+            text-align: center;
+            margin-top: var(--spacing-3xl);
+        }
+
+        /* ============================================ */
+        /* SEÇÃO DIFERENCIAIS (BENEFÍCIOS) */
+        /* ============================================ */
+        .beneficios {
+            background-color: var(--bg-primary);
+        }
+
+        .beneficios__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .beneficio-card {
+            text-align: center;
+            padding: var(--spacing-md);
+        }
+
+        .beneficio-card__icon {
+            font-size: var(--font-size-3xl);
+            color: var(--secondary-color);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .beneficio-card__title {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-lg);
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .beneficio-card__description {
+            color: var(--text-light);
+            font-size: var(--font-size-sm);
+            font-weight: 300;
+        }
+
+        /* ============================================ */
+        /* SEÇÃO DEPOIMENTOS */
+        /* ============================================ */
+        .depoimentos {
+            background-color: var(--bg-secondary);
+        }
+
+        .depoimentos__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .depoimento-card {
+            background-color: transparent;
+            padding: var(--spacing-lg);
+            border-left: 1px solid var(--secondary-color);
+            transition: all var(--transition-base);
+        }
+        
+        .depoimento-card:hover {
+            background-color: var(--bg-primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .depoimento-card__text {
+            color: var(--text-light);
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+        }
+
+        .depoimento-card__author {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .author-name {
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .author-role {
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary-dark);
+        }
+
+        /* ============================================ */
+        /* SEÇÃO FAQ */
+        /* ============================================ */
+        .faq {
+            background-color: var(--bg-primary);
+        }
+
+        .faq__container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: transparent;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            margin-bottom: 0;
+            overflow: hidden;
+        }
+
+        .faq-item__question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+            background-color: transparent;
+            border: none;
+            text-align: left;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-base);
+            font-weight: 500;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .faq-item__question:hover {
+            color: var(--secondary-color);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            transition: transform var(--transition-base);
+            color: var(--primary-light);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            color: var(--secondary-color);
+        }
+
+        .faq-item__answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-base);
+        }
+
+        .faq-item.active .faq-item__answer {
+            max-height: 500px;
+        }
+
+        .faq-item__answer p {
+            padding: 0 0 var(--spacing-md);
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        /* ============================================ */
+        /* SEÇÃO CONTATO */
+        /* ============================================ */
+        .contato {
+            background-color: var(--bg-secondary);
+        }
+
+        .contato__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+        }
+
+        .contato__info-title {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-2xl);
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .contato__info-description {
+            color: var(--text-light);
+            font-weight: 300;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .contato__details {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .contato__detail-item {
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: flex-start;
+        }
+
+        .detail-icon {
+            color: var(--secondary-color);
+            margin-top: 5px;
+        }
+
+        .detail-content h4 {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            font-size: var(--font-size-sm);
+            letter-spacing: 1px;
+        }
+
+        .detail-content p {
+            color: var(--text-light);
+            font-size: var(--font-size-base);
+            font-weight: 300;
+        }
+
+        /* ============================================ */
+        /* FOOTER */
+        /* ============================================ */
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--text-white);
+            padding: var(--spacing-3xl) 0 var(--spacing-lg);
+        }
+
+        .footer__container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer__logo {
+            display: inline-block;
+            text-decoration: none;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer__logo .logo-text {
+            color: var(--text-white);
+        }
+
+        .footer__description {
+            color: #A0AAB2;
+            font-weight: 300;
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-md);
+            max-width: 300px;
+        }
+
+        .footer__title {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-lg);
+            font-weight: 400;
+            margin-bottom: var(--spacing-md);
+            color: var(--secondary-light);
+        }
+
+        .footer__list, .footer__contact {
+            list-style: none;
+        }
+
+        .footer__list li, .footer__contact li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer__link {
+            color: #A0AAB2;
+            text-decoration: none;
+            font-size: var(--font-size-sm);
+            transition: color var(--transition-fast);
+        }
+
+        .footer__link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer__contact li {
+            color: #A0AAB2;
+            font-size: var(--font-size-sm);
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer__bottom {
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: var(--font-size-xs);
+            color: #A0AAB2;
+        }
+
+        /* ============================================ */
+        /* SCROLL TO TOP */
+        /* ============================================ */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            border: none;
+            border-radius: var(--border-radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            z-index: var(--z-fixed);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-dark);
+        }
+
+        /* ============================================ */
+        /* ANIMAÇÕES GERAIS */
+        /* ============================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+
+        /* ============================================ */
+        /* RESPONSIVIDADE */
+        /* ============================================ */
+        @media screen and (max-width: 968px) {
+            :root {
+                --font-size-5xl: 2.5rem;
+                --font-size-4xl: 2rem;
+                --spacing-3xl: 4rem;
+            }
+            .hero__container, .sobre__container, .contato__container {
+                grid-template-columns: 1fr;
+            }
+            .hero__image { display: none; } /* Removido do original, ajustado grid hero */
+            .sobre__image { order: -1; }
+            .footer__container { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav__menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--bg-primary);
+                padding: var(--spacing-3xl) var(--spacing-lg);
+                transition: right var(--transition-base);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .nav__menu.show-menu { right: 0; }
+            .nav__list {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--spacing-xl);
+            }
+            .nav__link { font-size: var(--font-size-lg); }
+            .nav__toggle, .nav__close { display: block; }
+            .nav__close {
+                position: absolute;
+                top: 25px;
+                right: var(--spacing-md);
+            }
+            .hero { padding: var(--spacing-3xl) 0; }
+            .hero__stats { grid-template-columns: 1fr; }
+            .footer__container { grid-template-columns: 1fr; text-align: center; }
+            .footer__contact li { justify-content: center; }
+            .footer__bottom { flex-direction: column; gap: var(--spacing-md); }
+            .galeria__grid { grid-template-columns: repeat(2, 1fr); }
+            .galeria__item--large { grid-column: span 2; grid-row: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- HEADER -->
+    <!-- ============================================ -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                <span class="logo-text">Oketa<span class="logo-dot">.</span></span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Início</a></li>
+                    <li class="nav__item"><a href="#sobre" class="nav__link">Escritório</a></li>
+                    <li class="nav__item"><a href="#servicos" class="nav__link">Expertise</a></li>
+                    <li class="nav__item"><a href="#projetos" class="nav__link">Projetos</a></li>
+                    <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION -->
+    <!-- ============================================ -->
+    <section class="hero" id="home">
+        <div class="hero__container container">
+            <div class="hero__content fade-in-up">
+                <h1 class="hero__title">
+                    Arquitetura com <span class="highlight">Alma Litorânea</span>
+                </h1>
+                <p class="hero__description">
+                    Projetos exclusivos no Litoral Norte de São Paulo. Integramos o conforto contemporâneo à essência da Mata Atlântica em Camburi.
+                </p>
+
+                <div class="hero__buttons">
+                    <a href="#projetos" class="btn btn-primary">Ver Portfólio</a>
+                    <a href="#contato" class="btn btn-secondary">Iniciar Projeto</a>
+                </div>
+
+                <div class="hero__stats">
+                    <div class="stat-item">
+                        <h3 class="stat-number">120+</h3>
+                        <p class="stat-label">Projetos Realizados</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">15+</h3>
+                        <p class="stat-label">Anos de Experiência</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">25+</h3>
+                        <p class="stat-label">Prêmios de Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO SOBRE -->
+    <!-- ============================================ -->
+    <section class="sobre section" id="sobre">
+        <div class="container">
+            <div class="sobre__container">
+                <div class="sobre__image fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Interior moderno projetado pela Oketa Arquitetura">
+                </div>
+
+                <div class="sobre__content fade-in-up">
+                    <span class="section__subtitle">O Escritório</span>
+                    <h2 class="sobre__subtitle">Design Contemporâneo em Sintonia com a Natureza</h2>
+                    <p class="sobre__text">
+                        Sediada em Camburi, a <strong>Oketa Arquitetura</strong> é um escritório focado em residências de alto padrão e projetos que respeitam a paisagem costeira. Acreditamos que a verdadeira sofisticação reside na simplicidade dos materiais e na harmonia com o entorno.
+                    </p>
+                    <p class="sobre__text">
+                        Nossa abordagem funde elementos naturais — como madeira freijó, pedras nativas e concreto aparente — com soluções tecnológicas modernas, criando refúgios que convidam ao descanso e à contemplação.
+                    </p>
+
+                    <ul class="sobre__list">
+                        <li class="sobre__list-item">
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Integração In/Out
+                        </li>
+                        <li class="sobre__list-item">
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Sustentabilidade Passiva
+                        </li>
+                        <li class="sobre__list-item">
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Materiais Naturais
+                        </li>
+                        <li class="sobre__list-item">
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Gestão Rigorosa de Obra
+                        </li>
+                    </ul>
+
+                    <a href="#contato" class="btn btn-primary" style="margin-top: 1rem;">Agendar Conversa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- GALERIA DE INSPIRAÇÃO -->
+    <!-- ============================================ -->
+    <section class="galeria">
+        <div class="galeria__grid">
+            <div class="galeria__item galeria__item--large">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1000&q=80" alt="Fachada Casa Camburi">
+            </div>
+            <div class="galeria__item">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Design de Interiores">
+            </div>
+            <div class="galeria__item">
+                <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=600&q=80" alt="Varanda Gourmet">
+            </div>
+            <div class="galeria__item">
+                <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=600&q=80" alt="Integração com Natureza">
+            </div>
+            <div class="galeria__item">
+                <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&q=80" alt="Detalhe Madeira e Concreto">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO SERVIÇOS -->
+    <!-- ============================================ -->
+    <section class="servicos section" id="servicos">
+        <div class="container">
+            <div class="section__header fade-in-up">
+                <span class="section__subtitle">Expertise</span>
+                <h2 class="section__title">Nossos Serviços</h2>
+                <p class="section__description">Soluções completas para transformar a sua visão em uma realidade arquitetônica de excelência.</p>
+            </div>
+
+            <div class="servicos__grid">
+                <!-- Serviço 1 -->
+                <div class="servico-card fade-in-up">
+                    <svg class="servico-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>
+                    <h3 class="servico-card__title">Projeto Arquitetônico</h3>
+                    <p class="servico-card__description">Do estudo de viabilidade ao projeto executivo, concebemos residências únicas, priorizando a funcionalidade e a plástica contemporânea.</p>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="servico-card fade-in-up">
+                    <svg class="servico-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+                    <h3 class="servico-card__title">Design de Interiores</h3>
+                    <p class="servico-card__description">Criação de atmosferas internas sofisticadas, com curadoria de mobiliário, iluminação e detalhamento de marcenaria sob medida.</p>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="servico-card fade-in-up">
+                    <svg class="servico-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <h3 class="servico-card__title">Acompanhamento de Obra</h3>
+                    <p class="servico-card__description">Gestão técnica e criativa durante a execução, garantindo que o resultado final seja perfeitamente fiel ao projeto aprovado.</p>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="servico-card fade-in-up">
+                    <svg class="servico-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                    <h3 class="servico-card__title">Reformas & Retrofit</h3>
+                    <p class="servico-card__description">Requalificação de espaços existentes, atualizando estética e infraestrutura com intervenções inteligentes e respeitosas.</p>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="servico-card fade-in-up">
+                    <svg class="servico-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7l-2-2"></path><path d="M17 8v.5a3.5 3.5 0 0 1-7 0V8a5 5 0 0 1 10 0v.5a4.5 4.5 0 0 1-9 0V8"></path><path d="M2 13a4.5 4.5 0 0 1 9 0v.5a3.5 3.5 0 0 1-7 0V13"></path></svg>
+                    <h3 class="servico-card__title">Paisagismo</h3>
+                    <p class="servico-card__description">Projetos paisagísticos focados na flora nativa da Mata Atlântica, emoldurando a arquitetura e promovendo bem-estar.</p>
+                </div>
+
+                <!-- Serviço 6 -->
+                <div class="servico-card fade-in-up">
+                    <svg class="servico-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    <h3 class="servico-card__title">Consultoria</h3>
+                    <p class="servico-card__description">Assessoria técnica na escolha de terrenos no Litoral Norte, avaliando potencial construtivo, insolação e topografia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO PORTFÓLIO (PROJETOS) -->
+    <!-- ============================================ -->
+    <section class="projetos section" id="projetos">
+        <div class="container">
+            <div class="section__header fade-in-up">
+                <span class="section__subtitle">Portfólio</span>
+                <h2 class="section__title">Obras Selecionadas</h2>
+                <p class="section__description">Explore alguns dos nossos trabalhos mais recentes no Litoral Norte.</p>
+            </div>
+
+            <div class="projetos__grid">
+                <!-- Projeto 1 -->
+                <div class="projeto-card fade-in-up">
+                    <div class="projeto-card__image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Casa Camburi">
+                        <span class="projeto-card__badge">Construído</span>
+                    </div>
+                    <div class="projeto-card__content">
+                        <p class="projeto-card__location">Camburi, SP</p>
+                        <h3 class="projeto-card__title">Refúgio Baleia</h3>
+                        <p class="projeto-card__desc">Um volume monolítico em concreto aparente que se abre completamente para a vista da Mata Atlântica.</p>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="projeto-card fade-in-up">
+                    <div class="projeto-card__image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Residência Maresias">
+                        <span class="projeto-card__badge" style="background-color: var(--secondary-color); color: var(--primary-dark);">Em Obras</span>
+                    </div>
+                    <div class="projeto-card__content">
+                        <p class="projeto-card__location">Maresias, SP</p>
+                        <h3 class="projeto-card__title">Casa Vento</h3>
+                        <p class="projeto-card__desc">Projetada para maximizar a ventilação cruzada, utilizando amplos painéis de madeira freijó articulados.</p>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="projeto-card fade-in-up">
+                    <div class="projeto-card__image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Interiores Juquehy">
+                        <span class="projeto-card__badge">Construído</span>
+                    </div>
+                    <div class="projeto-card__content">
+                        <p class="projeto-card__location">Juquehy, SP</p>
+                        <h3 class="projeto-card__title">Loft das Pedras</h3>
+                        <p class="projeto-card__desc">Reforma de interiores focada em texturas naturais, linho e pedras brutas locais para uma atmosfera relaxante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projetos__cta fade-in-up">
+                <a href="#contato" class="btn btn-primary">Solicitar Apresentação Completa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO DIFERENCIAIS -->
+    <!-- ============================================ -->
+    <section class="beneficios section">
+        <div class="container">
+            <div class="section__header fade-in-up">
+                <span class="section__subtitle">Diferenciais</span>
+                <h2 class="section__title">Por que escolher a Oketa?</h2>
+            </div>
+
+            <div class="beneficios__grid">
+                <div class="beneficio-card fade-in-up">
+                    <div class="beneficio-card__icon">📐</div>
+                    <h3 class="beneficio-card__title">Design Autoral</h3>
+                    <p class="beneficio-card__description">Traços puros, atemporais e exclusivos, pensados para refletir a sua essência.</p>
+                </div>
+                <div class="beneficio-card fade-in-up">
+                    <div class="beneficio-card__icon">🌿</div>
+                    <h3 class="beneficio-card__title">Foco Sustentável</h3>
+                    <p class="beneficio-card__description">Práticas e materiais que minimizam o impacto na rica biodiversidade do Litoral Norte.</p>
+                </div>
+                <div class="beneficio-card fade-in-up">
+                    <div class="beneficio-card__icon">⏱️</div>
+                    <h3 class="beneficio-card__title">Eficiência</h3>
+                    <p class="beneficio-card__description">Cronogramas realistas e gestão transparente para uma construção sem estresse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO DEPOIMENTOS -->
+    <!-- ============================================ -->
+    <section class="depoimentos section" id="depoimentos">
+        <div class="container">
+            <div class="section__header fade-in-up">
+                <span class="section__subtitle">Relatos</span>
+                <h2 class="section__title">O que dizem nossos clientes</h2>
+            </div>
+
+            <div class="depoimentos__grid">
+                <div class="depoimento-card fade-in-up">
+                    <p class="depoimento-card__text">
+                        "A equipe da Oketa conseguiu traduzir perfeitamente o nosso desejo de ter uma casa de praia moderna, mas que fosse extremamente acolhedora. A integração da sala com a mata é de tirar o fôlego."
+                    </p>
+                    <div class="depoimento-card__author">
+                        <div class="author-info">
+                            <h4 class="author-name">Família Almeida</h4>
+                            <p class="author-role">Proprietários - Refúgio Baleia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="depoimento-card fade-in-up">
+                    <p class="depoimento-card__text">
+                        "O acompanhamento de obra fez toda a diferença. Construir no litoral exige conhecimento técnico específico sobre umidade e maresia, e eles dominaram cada detalhe com maestria."
+                    </p>
+                    <div class="depoimento-card__author">
+                        <div class="author-info">
+                            <h4 class="author-name">Ricardo Mendes</h4>
+                            <p class="author-role">Proprietário - Casa Vento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO FAQ -->
+    <!-- ============================================ -->
+    <section class="faq section" id="faq">
+        <div class="container">
+            <div class="section__header fade-in-up">
+                <span class="section__subtitle">Tire suas dúvidas</span>
+                <h2 class="section__title">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="faq__container fade-in-up">
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        <span>Como é o processo de um projeto arquitetônico com a Oketa?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>O processo é dividido em etapas: Briefing e Levantamento (entendimento das necessidades), Estudo Preliminar (concepção criativa), Projeto Legal (aprovação na prefeitura) e Projeto Executivo (detalhamento técnico para obra). Mantemos o cliente envolvido em cada decisão crucial.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        <span>Vocês atendem apenas no Litoral Norte de São Paulo?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Nosso foco principal e expertise estão no Litoral Norte (Camburi, Baleia, Maresias, Juquehy, etc.), mas também realizamos projetos pontuais na capital (São Paulo) e no interior, desde que alinhados à nossa linguagem arquitetônica.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        <span>O escritório realiza o gerenciamento da obra?</span>
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Sim. Oferecemos o serviço de Acompanhamento e Gestão de Obra, que garante o rigor técnico, orçamentário e o cumprimento do cronograma, coordenando empreiteiros e fornecedores parceiros da região.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO CONTATO -->
+    <!-- ============================================ -->
+    <section class="contato section" id="contato">
+        <div class="container">
+            <div class="section__header fade-in-up">
+                <span class="section__subtitle">Vamos Conversar</span>
+                <h2 class="section__title">Fale Conosco</h2>
+                <p class="section__description">Traga suas ideias e vamos transformá-las em um projeto excepcional.</p>
+            </div>
+
+            <div class="contato__container fade-in-up">
+                <div class="contato__info">
+                    <h3 class="contato__info-title">Nosso Escritório</h3>
+                    <p class="contato__info-description">
+                        Localizado no coração de Camburi, nosso estúdio foi criado para inspirar. Agende uma visita para tomarmos um café.
+                    </p>
+
+                    <div class="contato__details">
+                        <div class="contato__detail-item">
+                            <svg class="detail-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <div class="detail-content">
+                                <h4>Telefone</h4>
+                                <p>(11) 99999-0000</p>
+                            </div>
+                        </div>
+
+                        <div class="contato__detail-item">
+                            <svg class="detail-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <div class="detail-content">
+                                <h4>E-mail</h4>
+                                <p>projetos@oketa.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="contato__detail-item">
+                            <svg class="detail-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <div class="detail-content">
+                                <h4>Endereço</h4>
+                                <p>Estrada do Camburi, 1500</p>
+                                <p>Camburi, São Sebastião - SP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato__map">
+                    <!-- Placeholder de mapa estilizado -->
+                    <div style="width: 100%; height: 100%; min-height: 300px; background: #e0ddd8; border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center; color: var(--primary-light);">
+                        [Mapa Interativo Camburi]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__column">
+                    <a href="#home" class="footer__logo">
+                        <span class="logo-text">Oketa<span class="logo-dot">.</span></span>
+                    </a>
+                    <p class="footer__description">
+                        Arquitetura de alto padrão no Litoral Norte Paulista. Design contemporâneo em harmonia com a natureza.
+                    </p>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Navegação</h3>
+                    <ul class="footer__list">
+                        <li><a href="#sobre" class="footer__link">O Escritório</a></li>
+                        <li><a href="#servicos" class="footer__link">Expertise</a></li>
+                        <li><a href="#projetos" class="footer__link">Projetos</a></li>
+                        <li><a href="#contato" class="footer__link">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Social</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Instagram</a></li>
+                        <li><a href="#" class="footer__link">Pinterest</a></li>
+                        <li><a href="#" class="footer__link">LinkedIn</a></li>
+                        <li><a href="#" class="footer__link">ArchDaily</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Visite</h3>
+                    <ul class="footer__contact">
+                        <li>Estrada do Camburi, 1500</li>
+                        <li>São Sebastião - SP</li>
+                        <li>(11) 99999-0000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>
+                    &copy; 2024 Oketa Arquitetura. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- BOTÃO SCROLL TO TOP -->
+    <!-- ============================================ -->
+    <button class="scroll-top" id="scroll-top" aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================================ -->
+    <script>
+        // ============================================
+        // MENU MOBILE - Toggle do menu
+        // ============================================
+        const navMenu = document.getElementById('nav-menu');
+        const navToggle = document.getElementById('nav-toggle');
+        const navClose = document.getElementById('nav-close');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.add('show-menu');
+            });
+        }
+
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu');
+            });
+        }
+
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu');
+            });
+        });
+
+        // ============================================
+        // ACTIVE LINK - Destacar link ativo
+        // ============================================
+        const sections = document.querySelectorAll('section[id]');
+        function scrollActive() {
+            const scrollY = window.pageYOffset;
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 100;
+                const sectionId = current.getAttribute('id');
+                const link = document.querySelector(`.nav__link[href*="${sectionId}"]`);
+                if (link) {
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        link.classList.add('active-link');
+                    } else {
+                        link.classList.remove('active-link');
+                    }
+                }
+            });
+        }
+        window.addEventListener('scroll', scrollActive);
+
+        // ============================================
+        // SCROLL SUAVE
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ============================================
+        // HEADER SCROLL
+        // ============================================
+        function scrollHeader() {
+            const header = document.getElementById('header');
+            if (this.scrollY >= 50) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.05)';
+            } else {
+                header.style.boxShadow = '0 1px 0 rgba(0,0,0,0.05)';
+            }
+        }
+        window.addEventListener('scroll', scrollHeader);
+
+        // ============================================
+        // FAQ ACCORDION
+        // ============================================
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-item__question');
+            question.addEventListener('click', () => {
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                item.classList.toggle('active');
+            });
+        });
+
+        // ============================================
+        // SCROLL TO TOP
+        // ============================================
+        const scrollTopButton = document.getElementById('scroll-top');
+        function toggleScrollTopButton() {
+            if (window.scrollY >= 500) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        }
+        window.addEventListener('scroll', toggleScrollTopButton);
+
+        if (scrollTopButton) {
+            scrollTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // ============================================
+        // ANIMAÇÕES AO ROLAR - Intersection Observer
+        // ============================================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    entry.target.style.opacity = "1"; // Garante visibilidade
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const animateElements = document.querySelectorAll('.fade-in-up');
+        animateElements.forEach(el => observer.observe(el));
+
+        // ============================================
+        // CONTADOR ANIMADO - Hero
+        // ============================================
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + '+';
+                }
+            }, 16);
+        }
+
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = document.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const text = stat.textContent;
+                        const number = parseInt(text.replace(/\D/g, ''));
+                        stat.textContent = '0';
+                        animateCounter(stat, number);
+                    });
+                    heroObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) {
+            heroObserver.observe(heroSection);
+        }
+
+        // ============================================
+        // INICIALIZAÇÃO
+        // ============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Arquitetura Oketa carregada com sucesso.');
+            scrollActive();
+            toggleScrollTopButton();
+        });
+    </script>
+</body>
+</html>
