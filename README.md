@@ -22,7 +22,7 @@ Um escritório de arquitetura precisa apresentar sua linguagem visual, serviços
 - JavaScript incorporado ao documento.
 - Google Fonts e imagens do Unsplash.
 
-O projeto está concentrado em um único arquivo: `oketa_arquitetura_camburi (1).html`.
+O projeto está concentrado em um único arquivo: `index.html`.
 
 ## Como executar
 
@@ -31,7 +31,7 @@ git clone https://github.com/Augustodevv/site-oketa.git
 cd site-oketa
 ```
 
-Abra `oketa_arquitetura_camburi (1).html` no navegador.
+Abra `index.html` no navegador.
 
 ## Estado do projeto
 
